@@ -16,41 +16,68 @@ This is a lightweight, terminal app made for local and remote network inspection
 
 ---
 
-## Get Started
+## Insteuctions
 
 1. Clone this repo
 
 2. Install dependencies:
 
 ```
-bla bla bla
+pip install psutil requests
 ```
-If you are on Windows, you'll also need to run
+If you are on windows, you'll also need to run
 ```
-bla bla bla
+pip install windows-curses
 ```
 ---
 
 ## Usage
 
 ```
-bla bla bla
+python netpeek.py <mode> [options]
 ```
 
 ### Modes
 
-bla bla bla
+| Mode           | Description                               |
+| -------------- | ----------------------------------------- |
+| `stats`        | Show bandwidth usage per interface        |
+| `ports`        | List open ports using `netstat`           |
+| `scan`         | Scan local subnet for active devices      |
+| `tui`          | Launch terminal live bandwidth monitor    |
+| `aboutme`      | Display your public IP, ISP, and location |
+| `ports_custom` | Scan a custom port range on a host        |
+| `ports_common` | Scan common ports on a host               |
 
 ---
 
-## 🧾 Examples
+## Examples commands
 
 ```
-bla bla bla
+# Show network interface stats
+python netpeek.py stats
+
+# Scan subnet and export results
+python netpeek.py scan --export
+
+# List local open ports
+python netpeek.py ports
+
+# Start terminal bandwidth monitor
+python netpeek.py tui
+
+# Display your public IP info
+python netpeek.py aboutme
+
+# Scan ports 20 to 100 on 192.168.1.181
+python netpeek.py ports_custom --host 192.168.1.181 --start-port 20 --end-port 100
+
+# Scan common ports on a host
+python netpeek.py ports_common --host 192.168.1.181
 ```
 
 ---
 
 ## Output Logs
 
-bla bla bla
+Use `--export` to save output in JSON format to `netpeek_log.json`. It'll also add the timestamp to the log
