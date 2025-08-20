@@ -1,4 +1,4 @@
-# NetPeek — All in One Terminal Network Toolkit
+# NetPeek - All in One Terminal Network Toolkit
 
 This is a simple terminal app made for network diagnostics, this has wide range of  tools like port and IP scanning, goelocation lookups, and exportable logs.
 
@@ -6,11 +6,11 @@ This is a simple terminal app made for network diagnostics, this has wide range 
 
 ## Features
 
-* View real time bandwidth usage per interface
-* Scan your local subnet and identify live hosts (with geolocation)
+* View live bandwidth usage of each interface
+* Scan your local subnet
 * List open ports on your machine
 * Scan custom or common ports on any IP
-* Live TUI bandwidth monitor
+* Live TUI bandwidth monitor displlay
 * Show your public IP address and ISP information
 * Export output to JSON
 
